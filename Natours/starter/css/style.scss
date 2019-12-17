@@ -1,11 +1,6 @@
 
 @import "modules/all";
 
-// Light green: #7ed56f;
-// Medium green: #55c57a;
-// Dark green: #28b485;
-
-
 * {
     margin: 0;
     padding: 0;
@@ -39,21 +34,20 @@ body {
 
         .logo {
             height: 35px;
-
-            &:hover {
-                height: 40px;
-            }
         }
     }
+
     .text-box {
         position: absolute;
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
+        text-align: center;
 
         .heading-primary {
             color: #ffffff;
             text-transform: uppercase;
+            margin: 0 0 60px 0;
 
             // prevents the animation from moving
             backface-visibility: hidden;
@@ -66,13 +60,6 @@ body {
 
                 animation: moveInLeft 1s ease-out;
             }
-            /* 
-            animation-duration: 1s;
-            animation-timing-function: ease-out;
-            animation-iteration-count: 3;
-            animation-delay: 3s;
-            
-            */
             
             .heading-primary-sub {
                 display: block;
@@ -83,9 +70,47 @@ body {
                 animation: moveInRight 1s ease-out;
             }
         }
+
+        .btn {
+            border-radius: 30px;
+            transition: all .2s;
+            backface-visibility: hidden;
+            
+            &:link,
+            &:visited {
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 15px 40px;
+                display: inline-block;
+            }
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10px 20px rgba(0,0,0,.2);
+            }
+            
+            &:active {
+                transform: translateY(-1px);
+                box-shadow: 0 5px 20px rgba(0,0,0,.2);
+            }
+        }
+
+        .btn-white {
+            background-color: #ffffff;
+            color: #777777;
+        }
     }
 }
 
-// h1 {
-//     color: violet;
-// }
+// Light green: #7ed56f;
+// Medium green: #55c57a;
+// Dark green: #28b485;
+
+/* 
+    --  Long writted animation --
+animation-duration: 1s;
+animation-timing-function: ease-out;
+animation-iteration-count: 3;
+animation-delay: 3s;
+
+*/
