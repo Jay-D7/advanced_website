@@ -4,12 +4,16 @@
 body {
     box-sizing: border-box;
     margin: 0;
-    padding: 30px;
+    padding: 3rem;
     font-family: "latoregular", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
     color: #777;
+}
+
+html {
+    font-size: 10px;
 }
 
 .header {
@@ -25,11 +29,11 @@ body {
 
     .logo-box {
         position: absolute;
-        top: 40px;
-        left: 40px;
+        top: 4rem;
+        left: 4rem;
 
         .logo {
-            height: 35px;
+            height: 3.5rem;
         }
     }
 
@@ -43,25 +47,25 @@ body {
         .heading-primary {
             color: #ffffff;
             text-transform: uppercase;
-            margin: 0 0 60px 0;
+            margin: 0 0 6rem 0;
 
             // prevents the animation from moving
             backface-visibility: hidden;
     
             .heading-primary-main {
                 display: block;
-                font-size: 60px;
+                font-size: 6rem;
                 font-weight: 400;
-                letter-spacing: 35px;
+                letter-spacing: 3.5rem;
 
                 animation: moveInLeft 1s ease-out;
             }
             
             .heading-primary-sub {
                 display: block;
-                font-size: 20px;
+                font-size: 2rem;
                 font-weight: 700;
-                letter-spacing: 17.4px;
+                letter-spacing: 1.75rem;
                 
                 animation: moveInRight 1s ease-out;
             }
@@ -69,7 +73,7 @@ body {
 
         .btn {
             position: relative;
-            border-radius: 100px;
+            border-radius: 10rem;
             transition: all .2s;
             backface-visibility: hidden;
 
@@ -80,18 +84,18 @@ body {
             &:visited {
                 text-transform: uppercase;
                 text-decoration: none;
-                padding: 15px 40px;
+                padding: 1.5rem 4rem;
                 display: inline-block;
             }
 
             &:hover {
                 transform: translateY(-3px);
-                box-shadow: 0 10px 20px rgba(0,0,0,.2);
+                box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
             }
             
             &:active {
                 transform: translateY(-1px);
-                box-shadow: 0 5px 20px rgba(0,0,0,.2);
+                box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
             }
 
             &::after {
@@ -99,7 +103,7 @@ body {
                 display: inline-block;
                 height: 100%;
                 width: 100%;
-                border-radius: 100px;
+                border-radius: 10rem;
                 position: absolute;
                 top: 0;
                 left: 0;
