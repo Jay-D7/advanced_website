@@ -12,8 +12,16 @@ body {
     color: #777;
 }
 
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
 html {
-    font-size: 10px;
+    font-size: 62.5%;
 }
 
 .header {
@@ -86,6 +94,7 @@ html {
                 text-decoration: none;
                 padding: 1.5rem 4rem;
                 display: inline-block;
+                font-size: 1.6rem;
             }
 
             &:hover {
