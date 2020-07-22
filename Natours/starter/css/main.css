@@ -35,6 +35,13 @@
 }
 
 @font-face {
+  font-family: 'latolight';
+  src: url("../fonts/lato_light.woff2") format("woff2"), url("../fonts/lato_light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'hellosunshine';
   src: url("../fonts/hellosunshineitalic1-webfont.woff2") format("woff2"), url("../fonts/hellosunshineitalic1-webfont.woff") format("woff");
   font-weight: normal;
@@ -162,7 +169,7 @@ body {
 }
 
 body {
-  font-family: 'latoregular', sans-serif;
+  font-family: 'latolight', sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #777;
@@ -265,6 +272,7 @@ body {
   padding: 1.5rem 4rem;
   display: inline-block;
   font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .btn:hover {
@@ -383,6 +391,16 @@ body {
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
 
+.card__side--back-2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485));
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+
+.card__side--back-3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa));
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+}
+
 .card:hover .card__side--front {
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
@@ -407,11 +425,13 @@ body {
 }
 
 .card__picture--2 {
-  background-image: url(../img/nat-5.jpg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485)), url(../img/nat-6.jpg);
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg);
 }
 
 .card__picture--3 {
-  background-image: url(../img/nat-5.jpg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa)), url(../img/nat-7.jpg);
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg);
 }
 
 .card__heading {
@@ -437,6 +457,16 @@ body {
   background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
 }
 
+.card__heading-span--2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.85)), to(rgba(40, 180, 133, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85));
+}
+
+.card__heading-span--3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.85)), to(rgba(86, 67, 250, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85));
+}
+
 .card__details {
   padding: 3rem;
 }
@@ -450,11 +480,39 @@ body {
 .card__details ul li {
   text-align: center;
   font-size: 1.5rem;
+  font-weight: 600;
   padding: 1rem;
 }
 
 .card__details ul li:not(:last-child) {
   border-bottom: 1px solid #eee;
+}
+
+.card__cta {
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+}
+
+.card__price-box {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 8rem;
+}
+
+.card__price-only {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.card__price-value {
+  font-size: 6rem;
+  font-weight: 100;
 }
 
 .composition {

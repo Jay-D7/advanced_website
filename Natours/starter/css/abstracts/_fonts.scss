@@ -41,6 +41,14 @@
 }
 
 @font-face {
+  font-family: 'latolight';
+  src: url('../fonts/lato_light.woff2') format('woff2'),
+    url('../fonts/lato_light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'hellosunshine';
   src: url('../fonts/hellosunshineitalic1-webfont.woff2') format('woff2'),
     url('../fonts/hellosunshineitalic1-webfont.woff') format('woff');
