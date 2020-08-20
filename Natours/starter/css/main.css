@@ -168,6 +168,10 @@ body {
           box-sizing: border-box;
 }
 
+button {
+  font-family: 'latoregular', sans-serif;
+}
+
 body {
   font-family: 'latolight', sans-serif;
   font-weight: 400;
@@ -239,27 +243,27 @@ body {
 }
 
 .u-center-text {
-  text-align: center;
+  text-align: center !important;
 }
 
 .u-margin-bottom-small {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem !important;
 }
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 
 .u-margin-bottom-big {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
 }
 
 .u-margin-top-big {
-  margin-top: 8rem;
+  margin-top: 8rem !important;
 }
 
 .u-margin-top-huge {
-  margin-top: 10rem;
+  margin-top: 10rem !important;
 }
 
 .bg-video {
@@ -280,46 +284,58 @@ body {
      object-fit: cover;
 }
 
-.btn {
-  position: relative;
-  border-radius: 10rem;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
-          animation: moveInBottom 0.5s ease-out 0.75s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-}
-
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
+  border-radius: 10rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
   font-size: 1.6rem;
-  font-weight: 600;
+  border: none;
+  cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
+  outline: none;
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-.btn:hover::after {
+.btn:hover::after, .btn:focus::after {
   -webkit-transform: scaleX(1.4) scaleY(1.6);
           transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
 
-.btn:active {
+.btn:active, .btn:focus {
+  outline: none;
   -webkit-transform: translateY(-1px);
           transform: translateY(-1px);
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn--white::after {
+  background-color: #fff;
+}
+
+.btn--green {
+  background-color: #55c57a;
+  color: #fff;
+}
+
+.btn--green::after {
+  background-color: #55c57a;
 }
 
 .btn::after {
@@ -336,26 +352,6 @@ body {
   transition: all 0.4s;
 }
 
-.btn--white {
-  background-color: #fff;
-  color: #777;
-}
-
-.btn--white::after {
-  background-color: #fff;
-}
-
-.btn--green {
-  background-color: #55c57a;
-  color: #fff;
-  -webkit-animation: none;
-          animation: none;
-}
-
-.btn--green::after {
-  background-color: #55c57a;
-}
-
 .btn--animated {
   -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
           animation: moveInBottom 0.5s ease-out 0.75s;
@@ -364,9 +360,7 @@ body {
 }
 
 .btn-text:link, .btn-text:visited {
-  font-family: 'latoregular', sans-serif;
   font-size: 1.6rem;
-  font-weight: 600;
   color: #55c57a;
   display: inline-block;
   text-decoration: none;
@@ -386,8 +380,8 @@ body {
 }
 
 .btn-text:active {
-  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -631,6 +625,110 @@ body {
           transform: translateY(-1.5rem) scale(1.03);
 }
 
+.form__group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: 700;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.form__input:focus {
+  font-weight: 300;
+  outline: none;
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #55c57a;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.form__input:focus:invalid {
+  border-bottom: 3px solid #ff7730;
+}
+
+.form__input::-webkit-input-placeholder {
+  color: #999;
+}
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+          transform: translateY(-4rem);
+}
+
+.form__radio-group {
+  width: 49%;
+  display: inline-block;
+}
+
+.form__radio-input {
+  display: none;
+}
+
+.form__radio-label {
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.5rem;
+}
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #55c57a;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.8rem;
+}
+
+.form__radio-button::after {
+  content: '';
+  display: block;
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #55c57a;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1;
+}
+
 .story {
   width: 75%;
   margin: 0 auto;
@@ -783,6 +881,10 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.header__text-box a {
+  font-family: 'latoregular', sans-serif;
 }
 
 .section-about {
