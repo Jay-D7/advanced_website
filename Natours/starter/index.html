@@ -18,7 +18,9 @@
   <div class="navigation">
     <input type="checkbox" class="navigation__checkbox" id="navi-toogle">
 
-    <label for="navi-toogle" class="navigation__button">MENU</label>
+    <label for="navi-toogle" class="navigation__button">
+      <span class="navigation__icon">&nbsp;</span>
+    </label>
 
     <div class="navigation__background">&nbsp;</div>
 
@@ -41,7 +43,7 @@
         <span class="heading-primary--main">Outdoors</span>
         <span class="heading-primary--sub">is where life happens</span>
       </h1>
-      <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+      <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a>
     </div>
   </header>
 
@@ -136,7 +138,7 @@
         </div>
       </div>
     </section>
-    <section class="section-tours">
+    <section class="section-tours" id="section-tours">
       <div class="u-center-text u-margin-bottom-big">
         <h2 class="heading-secondary">
           Most popular tours
@@ -369,6 +371,26 @@
       </div>
     </div>
   </footer>
+
+  <div class="popup">
+    <div class="popup__content">
+      <div class="popup__left">
+        <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+        <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+      </div>
+      <div class="popup__right">
+        <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+        <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+        <p class="popup__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris leo tellus, euismod ac
+          sagittis id, ultrices vel ipsum. Proin non nulla non dolor varius rhoncus. Aenean iaculis scelerisque auctor.
+          Suspendisse semper, metus ac fermentum pretium, lacus mi lacinia justo, nec dapibus ipsum nibh ut urna. Donec
+          dolor justo, placerat id scelerisque non, pharetra in orci. Quisque et mi a sem venenatis mattis ac at felis.
+          Integer ornare, lorem eget blandit venenatis, nisi mauris volutpat metus, quis lobortis sapien quam nec odio.
+          Etiam at elit enim.</p>
+        <a href="#" class="btn btn--green">Book now</a>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
