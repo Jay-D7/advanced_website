@@ -48,6 +48,13 @@
   font-style: italic;
 }
 
+/*
+0 - 600px:    phone
+600px - 900px: Tablet portrait
+900px - 1200px: Tablet landscape
+[1200px - 1800px] is where our normal styles apply
+1800px +: Big desktop
+*/
 @-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -64,7 +71,6 @@
             transform: translate(0);
   }
 }
-
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -161,6 +167,12 @@ animation-delay: 3s;
 
 html {
   font-size: 62.5%;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
 }
 
 body {
