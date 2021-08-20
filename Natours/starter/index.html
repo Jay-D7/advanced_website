@@ -16,9 +16,9 @@
 
 <body>
   <div class="navigation">
-    <input type="checkbox" class="navigation__checkbox" id="navi-toogle">
+    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
-    <label for="navi-toogle" class="navigation__button">
+    <label for="navi-toggle" class="navigation__button">
       <span class="navigation__icon">&nbsp;</span>
     </label>
 
@@ -364,7 +364,7 @@
       </div>
       <div class="col-1-of-2">
         <p class="footer__copyright">
-          Built my <a href="#" class="footer__link">Jakub Dragowski</a> for his online course <a href="#"
+          Built by <a href="#" class="footer__link">Jakub Dragowski</a> for his online course <a href="#"
             class="footer__link">Advanded CSS & Sass</a>. Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to
           use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the
           original author, Jonas Schmedtmann, is of course highly appreciated!
@@ -376,8 +376,12 @@
   <div class="popup" id="popup">
     <div class="popup__content">
       <div class="popup__left">
-        <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
-        <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+        <div class="popup__img_flex">
+          <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+        </div>
+        <div class="popup__img_flex">
+          <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+        </div>
       </div>
       <div class="popup__right">
         <a href="#section-tours" class="popup__close">&times;</a>
@@ -389,7 +393,9 @@
           dolor justo, placerat id scelerisque non, pharetra in orci. Quisque et mi a sem venenatis mattis ac at felis.
           Integer ornare, lorem eget blandit venenatis, nisi mauris volutpat metus, quis lobortis sapien quam nec odio.
           Etiam at elit enim.</p>
-        <a href="#" class="btn btn--green">Book now</a>
+        <div class="popup__button">
+          <a href="#" class="btn btn--green">Book now</a>
+        </div>
       </div>
     </div>
   </div>
