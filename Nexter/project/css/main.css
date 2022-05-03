@@ -96,6 +96,15 @@ body {
   background-color: #aaa;
 }
 
+@supports (display: grid) {
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 6rem;
+    align-items: start;
+  }
+}
+
 .story__pictures {
   background-color: #c69963;
   grid-column: full-start / col-end 4;
