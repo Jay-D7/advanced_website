@@ -66,11 +66,4 @@ body {
   @media only screen and (max-width: $bp-medium) {
     grid-template-rows: 6rem calc(100vh - 6rem);
   }
-
-  // DELETE LATER
-
-  & > * {
-    padding: 40px;
-    font-size: 3rem;
-  }
 }
