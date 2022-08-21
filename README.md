@@ -1,2 +1,3 @@
 # advanced_website
-Learning new features about HTML, CSS, JS
+
+Learn & improve new features about using SCSS, Flexbox, css, Html, Npm
